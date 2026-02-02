@@ -1,0 +1,202 @@
+/* ===== Base ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;                 /* FLEXBOX */
+  justify-content: space-between; /* FLEXBOX */
+  align-items: center;            /* FLEXBOX */
+  padding: 14px 18px;
+  background: #111827;
+  border-bottom: 2px solid #38bdf8;
+}
+
+.nav-brand {
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex; /* FLEXBOX */
+  gap: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  color: #93c5fd;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+/* ===== Header ===== */
+.hero {
+  max-width: 950px;
+  margin: 18px auto 0;
+  padding: 18px 18px 6px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  margin-top: 6px;
+  color: #cbd5e1;
+}
+
+/* ===== Cards (Sections) ===== */
+.card {
+  max-width: 950px;
+  margin: 18px auto;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.card h2 {
+  margin-top: 0;
+  border-left: 5px solid #38bdf8;
+  padding-left: 10px;
+}
+
+/* ===== About Flexbox ===== */
+.about-flex {
+  display: flex;        /* FLEXBOX */
+  gap: 18px;
+  align-items: center;  /* FLEXBOX */
+}
+
+.profile-img {
+  width: 180px;
+  max-width: 100%;
+  border-radius: 14px;
+  border: 2px solid #38bdf8;
+  background: rgba(255,255,255,0.06);
+  padding: 10px;
+}
+
+/* ===== Projects Flexbox Grid ===== */
+.projects-flex {
+  display: flex;        /* FLEXBOX */
+  gap: 16px;
+  flex-wrap: wrap;      /* FLEXBOX */
+}
+
+.project {
+  flex: 1 1 260px;      /* FLEXBOX sizing */
+  padding: 16px;
+  border-radius: 14px;
+  background: rgba(0,0,0,0.20);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.project h3 {
+  margin-top: 0;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 800;
+  color: #0f172a;
+  background: #38bdf8;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  filter: brightness(0.9);
+}
+
+/* ===== Contact ===== */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.contact-list a {
+  color: #a5b4fc;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #cbd5e1;
+}
+
+/* =========================================================
+   MEDIA QUERIES (RESPONSIVE REQUIREMENT)
+   - Change background color on small screens
+   - Stack flex layouts vertically
+   ========================================================= */
+
+@media (max-width: 700px) {
+  body {
+    background: #1f2937; /* different background on smaller screens */
+  }
+
+  .about-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+}
